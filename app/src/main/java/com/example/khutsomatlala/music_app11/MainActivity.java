@@ -1,5 +1,6 @@
 package com.example.khutsomatlala.music_app11;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -154,6 +155,8 @@ public class MainActivity extends Activity {
 
         for (int i = 0; i < fields.length; i++) {
             list.add(fields[i].getName());
+
+
         }
 
         //removing the first two elements,the $change item
@@ -214,18 +217,19 @@ public class MainActivity extends Activity {
     }
 
     //return the song name and artist according to the position stored in the array
+    @SuppressLint("NewApi")
     public String song_name(int position) {
 
         switch (position) {
 
             case 0:
-                listView.setBackground(getDrawable(R.drawable.aston_martin_rick_ross));
-                return " Aston Martin.mp3 - Rick Ross";
-
-            case 1:
                 listView.setBackground(getDrawable(R.drawable.changes_tupac));
                 return " Changes.mp3 - Tupac";
 
+            case 1:
+
+            listView.setBackground(getDrawable(R.drawable.aston_martin_rick_ross));
+            return " Aston Martin.mp3 - Rick Ross";
             case 2:
                 listView.setBackground(getDrawable(R.drawable.changes_tupac));
                 return " Dear mama.mp3 - Tupac";
